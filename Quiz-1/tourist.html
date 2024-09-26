@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" type="text/css" href="style-tourist.css">
+  <title>My Website</title>
+</head>
+<body>
+  <div class="header">
+    <div class="header-text">
+        <h1>Randi Palguna Artayasa</h1>
+        <h3>Web Programming Learning</h3>
+    </div>
+    <div class="header-logo">
+      <img src="img/its.png" alt="University Logo">
+    </div>
+  </div>
+  
+  <div class="bar">
+    <p>
+      <a href="index.html">Homepage</a>
+    </p>
+    <p>
+      <a href="profile.html">Profile</a>
+    </p>
+    <p>
+      <a href="hometown.html">Hometown</a>
+    </p>
+    <p>
+      <a href="food.html">Food</a>
+    </p>
+    <p>
+      <a href="tourist.html">Tourist</a>
+    </p>
+  </div>
+
+  <div class="content">
+    <img src="img/tourist/senggigi.jpg" alt="Senggigi Beach">
+    <img src="img/tourist/rinjani.jpg" alt="Mount Rinjani">
+    <p id="title">Tourist Spots</p>
+    <p>
+      Senggigi Beach
+      <br><br>
+      Senggigi Beach is one of the beach tourist attractions in the west of Lombok Island.
+      This beach is located in Senggigi Village, Batu Layar District, West Lombok Regency.
+    </p>
+    <p>
+      Mount Rinjani
+      <br><br>
+      Mount Rinjani is a mountain located on the island of Lombok, West Nusa Tenggara. 
+      The mountain is the second highest volcano in Indonesia and is a favorite mountain 
+      for Indonesian climbers because of its scenic beauty.
+    </p>
+    <div class="dark-btn">
+      <button id="darkModeBtn">Dark Mode</button>
+    </div>
+  </div>
+
+  <script>
+    const darkModeBtn = document.getElementById('darkModeBtn');
+    const contentDiv = document.querySelector('.content');
+
+    // Function to toggle dark mode
+    function toggleDarkMode() {
+      contentDiv.classList.toggle('dark-mode');
+
+      if (contentDiv.classList.contains('dark-mode')) {
+        darkModeBtn.textContent = 'Light Mode';
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        darkModeBtn.textContent = 'Dark Mode';
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    }
+
+    // Check if dark mode is enabled in localStorage when the page loads
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      contentDiv.classList.add('dark-mode');
+      darkModeBtn.textContent = 'Light Mode';
+    }
+
+    darkModeBtn.addEventListener('click', toggleDarkMode);
+  </script>
+</body>
+</html>

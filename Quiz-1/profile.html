@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" type="text/css" href="style-profile.css">
+  <title>My Website</title>
+</head>
+<body>
+  <div class="header">
+    <div class="header-text">
+        <h1>Randi Palguna Artayasa</h1>
+        <h3>Web Programming Learning</h3>
+    </div>
+    <div class="header-logo">
+      <img src="img/its.png" alt="University Logo">
+    </div>
+  </div>
+  
+  <div class="bar">
+    <p>
+      <a href="index.html">Homepage</a>
+    </p>
+    <p>
+      <a href="profile.html">Profile</a>
+    </p>
+    <p>
+      <a href="hometown.html">Hometown</a>
+    </p>
+    <p>
+      <a href="food.html">Food</a>
+    </p>
+    <p>
+      <a href="tourist.html">Tourist</a>
+    </p>
+  </div>
+
+  <div class="content">
+    <p id="title">Hello. I'm Randi</p>
+    <p>&nbsp;&nbsp;A student from Departement of Informatics—<br>Sepuluh Nopember Institute of Technology (ITS)</p>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <p>Follow Me</p>
+    <br><br><br>
+    <div class="content-link">
+      <a href="https://github.com/randiPalguna" target="_blank">
+        <img id="githubIcon" src="./img/profile/light-mode/github.png" alt="Github Icon" height="35px">
+      </a>
+      <a href="https://id.linkedin.com/in/randi-palguna-artayasa-060429210" target="_blank">
+        <img id="linkedinIcon" src="./img/profile/light-mode/linkedin.png" alt="Linkedin Icon" height="35px">
+      </a>
+      <a href="https://randipalguna.blogspot.com/" target="_blank">
+        <img id="bloggerIcon" src="./img/profile/light-mode/blogger.png" alt="Blogger Icon" height=35px>
+      </a>
+      <a href="https://www.instagram.com/randipalguna/" target="_blank">
+        <img id="instagramIcon" src="./img/profile/light-mode/instagram.png" alt="Instagram Icon" height="35px">
+      </a>
+    </div>
+    <div class="dark-btn">
+      <button id="darkModeBtn">Dark Mode</button>
+    </div>
+  </div>
+
+  <script>
+    const darkModeBtn = document.getElementById('darkModeBtn');
+    const contentDiv = document.querySelector('.content');
+    const icons = {
+      github: document.getElementById('githubIcon'),
+      linkedin: document.getElementById('linkedinIcon'),
+      blogger: document.getElementById('bloggerIcon'),
+      instagram: document.getElementById('instagramIcon')
+    };
+
+    const lightModeIcons = {
+      github: './img/profile/light-mode/github.png',
+      linkedin: './img/profile/light-mode/linkedin.png',
+      blogger: './img/profile/light-mode/blogger.png',
+      instagram: './img/profile/light-mode/instagram.png'
+    };
+
+    const darkModeIcons = {
+      github: './img/profile/dark-mode/github.png',
+      linkedin: './img/profile/dark-mode/linkedin.png',
+      blogger: './img/profile/dark-mode/blogger.png',
+      instagram: './img/profile/dark-mode/instagram.png'
+    };
+
+    function switchIcons(mode) {
+      if (mode == 'dark') {
+        icons.github.src = darkModeIcons.github;
+        icons.linkedin.src = darkModeIcons.linkedin;
+        icons.blogger.src = darkModeIcons.blogger;
+        icons.instagram.src = darkModeIcons.instagram;
+      } else {
+        icons.github.src = lightModeIcons.github;
+        icons.linkedin.src = lightModeIcons.linkedin;
+        icons.blogger.src = lightModeIcons.blogger;
+        icons.instagram.src = lightModeIcons.instagram;
+      }
+    }
+
+    function toggleDarkMode() {
+      contentDiv.classList.toggle('dark-mode');
+
+      if (contentDiv.classList.contains('dark-mode')) {
+        darkModeBtn.textContent = 'Light Mode';
+        localStorage.setItem('darkMode', 'enabled');
+        switchIcons('dark');
+      } else {
+        darkModeBtn.textContent = 'Dark Mode';
+        localStorage.setItem('darkMode', 'disabled');
+        switchIcons('light');
+      }
+    }
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      contentDiv.classList.add('dark-mode');
+      darkModeBtn.textContent = 'Light Mode';
+      switchIcons('dark');
+    }
+
+    darkModeBtn.addEventListener('click', toggleDarkMode);
+  </script>
+</body>
+</html>
