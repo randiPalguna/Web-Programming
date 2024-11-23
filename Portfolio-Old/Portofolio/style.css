@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  font-family: Montserrat;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+/* ================ Navigation bar section ================ */
+.navigation-bar {
+  position: sticky;
+  z-index: 99999;
+  top: 0;
+  background-color: rgba(40, 40, 40, 0.9);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 6vh;
+}
+
+.navigation {
+  display: flex;
+  gap: 3rem;
+  margin-right: 40px;
+  list-style-type: none;
+}
+
+.navigation li {
+  color: white;
+  font-size: 20px;
+  font-family: "Outfit";
+}
+
+.navigation a li {
+  transition: color 0.3s ease;
+}
+
+.navigation a li:hover {
+  color: #80ed99;
+}
+/* ================ Navigation bar section ================ */
+
+
+
+
+/* ================ Home section ================ */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 94vh;
+
+}
+
+.home h1 {
+  font-weight: 400;
+  font-size: 60px;
+}
+
+.home p {
+  font-weight: 300;
+  font-size: 50px;
+}
+
+.home img {
+  transform: rotate(90deg);
+  width: 25px;
+  position: relative;
+  top: 100px;
+}
+/* ================ Home section ================ */
+
+
+
+
+/* ================ Projects section ================ */
+.projects {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
+  color: white;
+  height: 100vh;
+  justify-content: center;
+}
+
+.projects h1 {
+  font-family: Outfit;
+  position: relative;
+  bottom: 100px;
+  font-size: 100px;
+  border-bottom: 18px solid #4d59ff;
+  margin-left: 120px;
+  width: fit-content;
+}
+
+.project_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  flex: 0.475;
+  margin-left: 120px;
+  display: flex;
+
+}
+
+.board img {
+  background-color: rgba(65, 65, 65, 0.9);
+  padding: 30px;
+}
+
+.line {
+/* background-color: aqua; */
+  flex: 0.05;
+  border-left: 3px solid white;
+  height: 50vh;
+}
+
+.description {
+/* background-color: blueviolet; */
+  flex: 0.475;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 50px;
+}
+
+.description h2 {
+  font-size: 40px;
+}
+
+.description p {
+  position: relative;
+  top: 20px;
+  width: 65%;
+  font-size: 20px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.button p {
+  background-color: rgba(65, 65, 65, 0.9);
+  position: relative;
+  gap: 10px;
+  top: 80px;
+  width:fit-content;
+  padding: 10px;
+  color: white;
+}
+
+#project_1_live  {
+  background: linear-gradient(90deg, rgba(253,29,29,1) 10%, rgba(252,176,69,1) 100%);
+}
+/* ================ Projects section ================ */
+
+
+
+
+/* ================ Achievements section ================ */
+.achievements {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.achievements h1 {
+  font-family: Outfit;
+  align-self: flex-end;
+  position: relative;
+  top: 60px;
+  font-size: 100px;
+  border-bottom: 18px solid gold;
+  width: fit-content;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  position: relative;
+  top: 150px;
+  color: white;
+}
+
+.achievement_1,
+.achievement_2 {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-image: linear-gradient(90deg, rgb(34, 34, 34), rgb(97, 97, 97));
+  padding: 40px;
+}
+
+.achievement_1 img,
+.achievement_2 img {
+  margin-right: 70px;
+}
+
+.achievement_desc {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 35px;
+}
+
+.achievement_desc h2 {
+  font-size: 40px;
+}
+
+.achievement_desc p {
+  font-size: 20px;
+}
+/* ================ Achievements section ================ */
+
+
+
+
+/* ================ Contacts section ================ */
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 94vh;
+  background-color: black;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.contacts h1 {
+  font-family: Outfit;
+  position: relative;
+  bottom: 200px;
+  font-size: 100px;
+  border-bottom: 18px solid #ff355a;
+}
+
+.contact_list {
+  display: flex;
+  gap: 200px;
+}
+
+.email, .github, .linkedin, .instagram {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts img {
+  width: 50px;
+}
+/* ================ Contacts section ================ */
+
+
+
+
+/* ================ Footer section ================ */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6vh;
+  background-color: rgb(40, 40, 40);
+  box-shadow: 0 0px 80px rgba(80, 80, 80, 0.5);
+  color: #9d9d9d;
+  font-family: Outfit;
+}
+/* ================ Footer section ================ */
+
+
+
+
+/* ================ Media ================ */
+@media (max-width: 1440px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects h1 {
+    font-size: 50px;
+    margin-left: 0;
+  }
+
+  .project_1 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 30px;
+  }
+  
+  .board {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .board img {
+    padding: 10px;
+    width: 50%;
+  }
+
+  .description {
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+  }
+  
+  .description h2 {
+    font-size: 100%;
+  }
+
+  .description p {
+    font-size: 15px;
+    text-align: justify;
+    width: 70%;
+  }
+  
+  .button {
+    align-items: center;
+  }
+
+  .button p {
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+  }
+
+  /* =========================================== */
+
+  .achievements {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .achievements h1 {
+    align-self: center;
+    font-size: 50px;
+    top: 30px;
+  }
+  
+  .cards {
+    gap: 30px;
+    top: 60px;
+  }
+
+  .achievement_1,
+  .achievement_2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .achievement_desc {
+    width: 110%;
+    gap: 8px;
+  }
+
+  .achievement_desc h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .achievement_desc p {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .achievement_1 img,
+  .achievement_2 img {
+    position: relative;
+    top: 20px;
+    margin: 0;
+    width: 50px;
+  }
+
+  /* =========================================== */
+
+  .contacts h1 {
+    font-size: 50px;
+    bottom: 0px
+  }
+
+  .contact_list {
+    flex-direction: column;
+    gap: 50px;
+    position: relative;
+    top: 30px;
+  }
+
+  .email, .github, .linkedin, .instagram {
+    gap: 1px;
+    font-size: 12px;
+  }
+
+  .contacts img {
+    width: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* =========================================== */
+  
+  .navigation-bar {
+    justify-content: center;
+  }
+
+  .navigation {
+    gap: 1rem;
+  }
+  .navigation li {
+    font-size: 100%;
+    width: 50%;
+  }
+
+  /* =========================================== */
+  
+  .home h1, .home p {
+    font-size: 180%;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* =========================================== */
+  
+  .achievements h1 {
+    font-size: 40px;  
+  }
+
+  /* =========================================== */
+}
+/* ================ Media ================ */

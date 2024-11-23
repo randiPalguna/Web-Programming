@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./images/logo/favicon.png">
+    <title>Randi Palguna Artayasa</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <a name="home"></a>
+    <nav class="navigation-bar">
+      <ul class="navigation">
+        <a href="#home">
+          <li id="home_id">Home</li>
+        </a>
+        <a href="#projects">
+          <li id="projects_id">Project</li>
+        </a>
+        <a href="#achievements">
+          <li id="achievements_id">Achievements</li>
+        </a>
+        <a href="#contacts">
+          <li id="contacts_id">Contacts</li>
+        </a>
+      </ul>
+    </nav>
+
+    <div class="home">
+      <h1>Hello, I'm <span>Randi</span>.</h1>
+      <p>I'm an <span>informatics</span> student at ITS.</p>
+      <a href="#projects"><img src="./images/logo/arrow.png"></a>
+    </div>
+
+    <a name="projects"></a>
+    <div class="projects">
+      <h1>Project</h1>
+      <div class="project_1">
+        <div class="board">
+          <img src="./images/projects/open-nature.png" width="70%">
+        </div>
+        <div class="line"></div>
+        <div class="description">
+          <h2>Open Nature — Shopping App</h2>
+          <p>A user-friendly shopping platform project built with Laravel and integrated with a MySQL database.</p>
+          <div class="button">
+            <p id="project_1_live">Live App</p>
+            <a href="https://github.com/randiPalguna/OpenNature" target="_blank">
+              <p id="project_1_github">Link To Github</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <a name="achievements"></a>
+    <div class="achievements">
+      <h1>Achievements</h1>
+      <div class="cards">
+        <div class="achievement_1">
+          <div class="achievement_desc">
+            <h2>Finalis OSN Tingkat Nasional 2022</h2>
+            <p>Olimpiade Sains Nasional Bidang Lomba Informatika Komputer. Diselengarakan oleh Kementrian Pendidikan, Kebudayaan, Riset, dan Teknologi.</p>
+          </div>
+          <img src="./images/logo/osn.png" width="10%">
+        </div>
+        <div class="achievement_2">
+          <div class="achievement_desc">
+            <h2>Finalis KSN Tingkat Nasional 2021</h2>
+            <p>Kompetisi Sains Nasional Bidang Lomba Informatika Komputer. Diselengarakan oleh Kementrian Pendidikan, Kebudayaan, Riset, dan Teknologi.</p>
+          </div>
+          <img src="./images/logo/osn.png" width="10%">
+        </div>        
+      </div>
+    </div>
+
+    <a name="contacts"></a>
+    <div class="contacts">
+      <h1>Contacts</h1>
+      <div class="contact_list">
+        <div class="email">
+          <h2>Email</h2>
+          <a href="https://accounts.google.com/ServiceLogin?service=mail&passive=true&Email=gmail@domain.com&continue=https://mail.google.com/mail/u/gmail@domain.com/?view=cm%26fs=1%26to=randipalgunacollege@gmail.com%26su=SUBJECT%26body=BODY%26" target="_blank">
+            <img src="./images/logo/email.png">
+          </a>
+          <p>randipalgunacollege@gmail.com</p>
+        </div>
+        <div class="github">
+          <h2>Github</h2>
+          <a href="https://github.com/randiPalguna" target="_blank">
+            <img src="./images/logo/github.png">
+          </a>
+          <p>randiPalguna</p>
+        </div>
+        <div class="linkedin">
+          <h2>Linkedin</h2>
+          <a href="https://www.linkedin.com/in/randi-palguna-artayasa-2424a1307/" target="_blank">
+            <img src="./images/logo/linkedin.png">
+          </a>
+          <p>Randi Palguna Artayasa</p>
+        </div>
+        <div class="instagram">
+          <h2>Instagram</h2>
+          <a href="https://www.instagram.com/randipalguna/" target="_blank">
+            <img src="./images/logo/instagram.png">
+          </a>
+          <p>@randipalguna</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      Randi Palguna Artayasa ©2024
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const sections = document.querySelectorAll('.home, .projects, .achievements, .contacts');
+        const navLinks = document.querySelectorAll('.navigation li');
+
+        const options = {
+          threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              navLinks.forEach(link => link.style.color = '');
+              const sectionId = entry.target.className; 
+              document.querySelector(`#${sectionId}_id`).style.color = '#80ed99';
+            }
+          });
+        }, options);
+
+        sections.forEach(section => observer.observe(section));
+      });
+    </script>
+  </body>
+</html>
