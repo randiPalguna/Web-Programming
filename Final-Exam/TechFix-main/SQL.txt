@@ -1,0 +1,36 @@
+CREATE DATABASE TechFix;
+
+USE TechFix;
+
+-- Table: Service
+CREATE TABLE Service (
+    id INT AUTO_INCREMENT,
+    description varchar(50) NOT NULL,
+    price decimal(15,2) NOT NULL,
+    CONSTRAINT Service_pk PRIMARY KEY (id)
+);
+
+-- =================
+-- Filling the table: Service
+-- =================
+
+INSERT INTO Service (`id`, `description`, `price`)
+	VALUES ('1', 'Upgrade SSD', 50000);
+INSERT INTO Service
+	VALUES ('2', 'Upgrade RAM 4GB', 250000);
+
+-- Table: Users
+CREATE TABLE Users (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Username VARCHAR(50) NOT NULL UNIQUE,
+    PasswordHash VARCHAR(255) NOT NULL,
+    FullName VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE
+);
+
+-- =================
+-- Filling the table: Users
+-- =================
+
+INSERT INTO Users (Username, PasswordHash, FullName, Email)
+VALUES ('admin', SHA2('admin', 256), 'Test User', 'admin@gmail.com');

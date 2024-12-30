@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Manses\\Akademik\\Semester 3\\Pemrograman Web\\EAS\\TechFix\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8CEB5B3C-CFD1-48A7-A1C0-E2ADCD4C7640}|C:\\Manses\\Akademik\\Semester 3\\Pemrograman Web\\EAS\\TechFix\\TechFix|c:\\manses\\akademik\\semester 3\\pemrograman web\\eas\\techfix\\techfix\\service.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{8CEB5B3C-CFD1-48A7-A1C0-E2ADCD4C7640}|C:\\Manses\\Akademik\\Semester 3\\Pemrograman Web\\EAS\\TechFix\\TechFix|solutionrelative:techfix\\service.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Service.aspx",
+              "DocumentMoniker": "C:\\Manses\\Akademik\\Semester 3\\Pemrograman Web\\EAS\\TechFix\\TechFix\\Service.aspx",
+              "RelativeDocumentMoniker": "TechFix\\Service.aspx",
+              "ToolTip": "C:\\Manses\\Akademik\\Semester 3\\Pemrograman Web\\EAS\\TechFix\\TechFix\\Service.aspx",
+              "RelativeToolTip": "TechFix\\Service.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-12-15T09:09:10.2Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
